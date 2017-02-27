@@ -1,0 +1,51 @@
+.ImgPerso-panelIcon{
+background: url("img/cloudtemple.gif") no-repeat 0 0;
+width: 16px;
+height: 16px;
+overflow: hidden;
+}
+
+.divNoUrl{
+width:400px;
+border:1px solid rgb(0, 0, 0);
+margin:50px auto;
+padding:10px 20px;
+}
+
+.tEditUPS{
+width: 100%;
+}
+
+.tEditUPS td{
+padding:4px;
+margin:0;
+}
+
+.tEditUPS input{
+  font-size: 12px;
+}
+
+.tEditUPS td:first-child{width:30%;}
+.tEditUPS td:last-child{width:30px;}
+
+.divDeleteUrl{
+background-image: url("/zimlet/com_cloudtemple_zimletplus/img/delete.png");
+background-size: 24px 24px !important;
+background-position: left top !important;
+background-repeat: no-repeat !important;
+width: 24px;
+height: 24px;
+cursor: pointer;
+}
+
+.docInfo{
+font-size: 12px !important;
+}
+
+.zplusname{
+  width: 150px;
+}
+
+.zplusurl{
+  width: 300px;
+}

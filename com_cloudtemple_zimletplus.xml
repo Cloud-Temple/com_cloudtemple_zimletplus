@@ -1,0 +1,12 @@
+<zimlet name="com_cloudtemple_zimletplus" version="1.1" label="${msg.zimletPlusLabel}" description="${msg.zimletPlusDesc}">
+  <include>com_cloudtemple_zimletplus.js</include>
+  <includeCSS>com_cloudtemple_zimletplus.css</includeCSS>
+  <resource>favicon.png</resource>
+  <handlerObject>com_cloudtemple_zimletplus_HandlerObject</handlerObject>
+  <zimletPanelItem label="Zimlet +" icon="Perso-panelIcon">
+    <toolTipText>${msg.zimletPanelDesc}</toolTipText>
+  </zimletPanelItem>
+  <userProperties>
+    <property type="string" name="tabs" value="[]"/>
+  </userProperties>
+</zimlet>

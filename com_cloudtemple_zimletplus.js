@@ -188,6 +188,7 @@ com_cloudtemple_zimletplus_HandlerObject.prototype.setUserProperties = function(
     var tabs_tmp = [];
     var trsUPS = document.getElementById("tEditUPS").getElementsByTagName('tr');
 
+    var isEmpty = this.isTabsEmpty(trsUPS);
     for (var i=0; i<trsUPS.length; i++) {
       var inputsUPS = trsUPS[i].getElementsByTagName('input');
       if(inputsUPS.length == 0){continue;}
@@ -196,15 +197,28 @@ com_cloudtemple_zimletplus_HandlerObject.prototype.setUserProperties = function(
       var url = this.completeUrl(inputsUPS[1].value);
 
       tabs_tmp.push({name: name, url: url});
-    }
 
-    this.EditUPDialog.popdown();
-
-    if (this.isValidUserProperties(tabs_tmp)) {
-      this.setUserProperty("tabs", JSON.stringify(tabs_tmp), true);
-      this._refreshBrowser();
+      if (!isEmpty && this.isValidUserProperties(tabs_tmp) ) {
+        this.setUserProperty("tabs", JSON.stringify(tabs_tmp), true);
+        this._refreshBrowser();
+      }
     }
   }
+  this.EditUPDialog.popdown();
+};
+
+com_cloudtemple_zimletplus_HandlerObject.prototype.isTabsEmpty = function(editTrs){
+  var flag = true;
+  for(var i =0; i < editTrs.length; i++){
+    row = editTrs[i];
+    for (var j = 0; j < row.getElementsByTagName('input').length; j++){
+      input = row.getElementsByTagName('input')[j];
+      if (input.value != "" && input.value.match(/\S/) != null){
+        flag = false;
+      }
+    }
+  }
+  return flag
 };
 
 com_cloudtemple_zimletplus_HandlerObject.prototype.isValidUserProperties = function(tabs_tmp) {

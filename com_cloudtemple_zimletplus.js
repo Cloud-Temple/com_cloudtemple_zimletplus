@@ -1,6 +1,6 @@
 /*
 com_cloudtemple_zimletplus
-Copyright (C) 2016-2017 - CloudTemple
+Copyright (C) 2016-2017 - Maxime Désécot -  CloudTemple
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

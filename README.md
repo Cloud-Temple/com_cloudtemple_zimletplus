@@ -1,6 +1,6 @@
 # com_cloudtemple_zimletplus
 
-## What is it ? 
+## What is it ? 
 
 The zimletPlus zimlet allows the Zimbra user to add their own shortcuts to other websites. The shortcuts are represented by additional tabs that the user can easily access while browsing the webmail.
 
